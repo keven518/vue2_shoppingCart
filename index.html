@@ -2,10 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>购物车</title>
+  <title>购物车11</title>
 </head>
 <body>
-  <div id="app">{{title}}</div>
+  <div>{{title}}</div>
+  <ul id="app">
+    <li v-for="item in productList">
+      {{ item.productName }}
+    </li>
+  </ul>
   <script src="js/lib/vue.min.js"></script>
   <script src="js/lib/vue-resource.min.js"></script>
   <script src="js/cart.js"></script>

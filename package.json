@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/keven518/vue2_shoppingCart#readme",
   "devDependencies": {
+    "browser-sync": "^2.18.7",
+    "gulp": "^3.9.1",
     "vue": "^2.1.10",
     "vue-resource": "^1.2.0"
   }
