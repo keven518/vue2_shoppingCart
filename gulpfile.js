@@ -14,7 +14,8 @@ gulp.task('default', function() {
           notify:false //开启静默模式
     });
     //监听任何文件变化，实时刷新页面
-    gulp.watch("./**/*.*").on('change', browserSync.reload);
+    gulp.watch("./*.html").on('change', browserSync.reload);
+    gulp.watch("./**/*.js").on('change', browserSync.reload);
     //gulp.watch('./sass/**/*.scss',['sass-reload']);
     //gulp.watch(('./*.html')).on('change',reload);
 });

@@ -1,7 +1,7 @@
 var vm = new Vue({
   el: '#app',
   data: {
-    title:'hello'
+    title:'hello2'
   },
   filters: {
 
@@ -12,7 +12,7 @@ var vm = new Vue({
   methods: {
     cartView: function () {
       this.$http.get("data/cartData.json").then(function (res) {
-          console.log(res);
+          console.log(res.body);
       });
     }
   }
