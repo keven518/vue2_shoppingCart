@@ -15,7 +15,7 @@
             "partsName":"打火机"
           },{
             "partsId":"10002",
-            "partsName":"打火阿斯蒂芬"
+            "partsName":"过滤嘴"
           }
         ]
       },
@@ -29,6 +29,19 @@
           {
             "partsId":"20001",
             "partsName":"吸管"
+          }
+        ]
+      },
+      {
+        "productId":"600100002120",
+        "productName":"洗发水",
+        "productPrice":14,
+        "productQuentity":25,
+        "productImage":"img/goods-2.jpg",
+        "parts":[
+          {
+            "partsId":"20001",
+            "partsName":"肥皂"
           }
         ]
       }

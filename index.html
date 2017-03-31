@@ -3,14 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <title>购物车11</title>
+  <style type="text/css">
+  .icon {
+    display: inline-block;
+    width: 20px;
+
+  }
+  </style>
 </head>
 <body>
-  <div>{{title}}</div>
-  <ul id="app">
-    <li v-for="item in productList">
-      {{ item.productName }}
+  <div id="app"><h2>{{title}}</h2>
+  <br>
+  <h2>{{totalMoney}}</h2>
+  <ul>
+    <li v-for=" (item,i) in productList">
+      <i class="kv" v-bind:class="{'check':item.checked}" @click="selectedPro(item)">oo</i>
+      {{ item.productName }} -- {{i}} -- {{ item.productPrice | formatMoney }}
+      <br>
+      <i class="icon" @click="changeMoney(item,-1)">-</i>
+      <input type="text" value="0" v-model="item.productQuentity">
+      <i class="icon" @click="changeMoney(item,1)">+</i>
+      <br>
+      <span v-for="cItem in item.parts">{{ cItem.partsName }}</span>
+      <br>
+      <span @click="pp()">总额：{{item.productPrice*item.productQuentity | money('块')}}</span>
     </li>
   </ul>
+  <br>
+  <i class="kv" :class="{'check':checkAllFlag}" @click="checkAll(true)">全选</i>
+  <br>
+  <i class="kv" :class="{'check':checkAllFlag}" @click="checkAll(false)">取消全选</i>
+  </div>
   <script src="js/lib/vue.min.js"></script>
   <script src="js/lib/vue-resource.min.js"></script>
   <script src="js/cart.js"></script>
